@@ -12,13 +12,7 @@ export function Navbar() {
   const navItems = [
     { label: "Chat", href: "/chat" },
     { label: "Resources", href: "/resources" },
-    { label: "Changelog", href: "/changelog" },
-    { 
-      label: "Twitter",
-      href: "https://x.com/chilli_ai",
-      external: true,
-      icon: <FaTwitter className="h-4 w-4" />
-    }
+    { label: "Changelog", href: "/changelog" }
   ];
 
   const handleNavClick = () => {
