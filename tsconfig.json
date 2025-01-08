@@ -14,7 +14,12 @@
     "allowImportingTsExtensions": true,
     "moduleResolution": "bundler",
     "baseUrl": ".",
-    "types": ["node", "vite/client"],
+    "types": [
+      "node",
+      "vite/client",
+      "@solana/web3.js",
+      "@solana/wallet-adapter-base"
+    ],
     "paths": {
       "@db": ["./db/index.ts"],
       "@db/*": ["./db/*"],

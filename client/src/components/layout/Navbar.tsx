@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { FaTwitter } from "react-icons/fa";
+import { WalletButton } from "@/components/ui/WalletButton";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,9 +52,7 @@ export function Navbar() {
                 </Link>
               )
             ))}
-            <Button variant="outline">
-              Connect Wallet
-            </Button>
+            <WalletButton />
           </div>
 
           {/* Mobile menu button */}
@@ -90,9 +89,9 @@ export function Navbar() {
                 </Link>
               )
             ))}
-            <Button variant="outline" className="w-full">
-              Connect Wallet
-            </Button>
+            <div className="mt-4">
+              <WalletButton />
+            </div>
           </div>
         )}
       </div>
