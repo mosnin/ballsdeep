@@ -4,18 +4,26 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Terminal as TerminalIcon } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
+import { useToast } from "@/hooks/use-toast";
 
 interface Message {
   role: "user" | "assistant";
   content: string;
+  timestamp?: string;
+}
+
+interface ChatResponse {
+  message: string;
+  timestamp: string;
 }
 
 export function Terminal() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
+  const { toast } = useToast();
 
   const chatMutation = useMutation({
-    mutationFn: async (message: string) => {
+    mutationFn: async (message: string): Promise<ChatResponse> => {
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
@@ -31,14 +39,26 @@ export function Terminal() {
       return response.json();
     },
     onSuccess: (data) => {
-      setMessages(prev => [...prev, { role: "assistant", content: data.message }]);
+      const assistantMessage: Message = {
+        role: "assistant",
+        content: data.message,
+        timestamp: data.timestamp
+      };
+      setMessages(prev => [...prev, assistantMessage]);
     },
     onError: (error) => {
       console.error("Chat error:", error);
-      setMessages(prev => [...prev, {
+      toast({
+        title: "Error",
+        description: "Failed to get a response. Please try again.",
+        variant: "destructive",
+      });
+      const errorMessage: Message = {
         role: "assistant",
-        content: "I apologize, but I encountered an error. Please try again."
-      }]);
+        content: "I apologize, but I encountered an error. Please try again.",
+        timestamp: new Date().toISOString()
+      };
+      setMessages(prev => [...prev, errorMessage]);
     }
   });
 
@@ -46,7 +66,11 @@ export function Terminal() {
     e.preventDefault();
     if (!input.trim() || chatMutation.isPending) return;
 
-    const userMessage = { role: "user", content: input };
+    const userMessage: Message = {
+      role: "user",
+      content: input,
+      timestamp: new Date().toISOString()
+    };
     setMessages(prev => [...prev, userMessage]);
     setInput("");
 
@@ -72,6 +96,11 @@ export function Terminal() {
           >
             <div className="flex items-center gap-2 mb-1 font-mono text-sm text-muted-foreground">
               {msg.role === "assistant" ? "shevoki@solana:~$" : "user@solana:~$"}
+              {msg.timestamp && (
+                <span className="text-xs opacity-50">
+                  {new Date(msg.timestamp).toLocaleTimeString()}
+                </span>
+              )}
             </div>
             <div className="font-mono whitespace-pre-wrap">
               {msg.content}
@@ -101,8 +130,12 @@ export function Terminal() {
             className="font-mono"
             disabled={chatMutation.isPending}
           />
-          <Button type="submit" disabled={chatMutation.isPending}>
-            Send
+          <Button 
+            type="submit" 
+            disabled={chatMutation.isPending}
+            className="font-mono"
+          >
+            {chatMutation.isPending ? "Processing..." : "Send"}
           </Button>
         </div>
       </form>
