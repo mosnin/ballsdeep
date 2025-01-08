@@ -104,6 +104,40 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Community Section */}
+      <section className="text-center mb-16">
+        <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 font-mono">
+          <span className="text-primary">$</span> ./join_network.sh
+        </div>
+        <div className="max-w-3xl mx-auto">
+          <Card className="border border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-colors">
+            <CardContent className="p-8">
+              <h2 className="text-2xl font-bold mb-4 font-mono">
+                <span className="text-primary">&gt;</span> Join the Neural Network
+              </h2>
+              <p className="text-muted-foreground mb-6 font-mono">
+                <span className="text-primary/60">$</span> Connect with fellow developers, traders, and blockchain enthusiasts. Build the future of Solana education together.
+              </p>
+              <div className="flex justify-center gap-4">
+                <a 
+                  href="https://x.com/shevoki_ai" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono"
+                >
+                  <span className="text-primary">$</span> Follow Updates
+                </a>
+                <Link href="/chat">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono cursor-pointer">
+                    <span className="text-primary">&gt;</span> Start Building
+                  </span>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
     </div>
   );
 }
