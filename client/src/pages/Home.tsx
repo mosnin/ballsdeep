@@ -68,10 +68,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center mb-16 font-mono">
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 text-primary animate-pulse">
-          {'>'} initializing wasabi_ai v0.1.0
+          {'>'} initializing chilli_ai v0.1.0
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
-          ./meet_wasabi.sh
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 text-transparent bg-clip-text">
+          ./chilli.ai
         </h1>
         <p className="text-lg mb-8 text-muted-foreground font-mono">
           <span className="text-primary">$</span> Your AI companion for navigating the Solana ecosystem
