@@ -11,6 +11,7 @@ export function Navbar() {
 
   const navItems = [
     { label: "Chat", href: "/chat" },
+    { label: "Resources", href: "/resources" },
     { label: "Changelog", href: "/changelog" },
     { 
       label: "Twitter",

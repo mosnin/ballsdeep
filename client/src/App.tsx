@@ -6,6 +6,7 @@ import Chat from "./pages/Chat";
 import Changelog from "./pages/Changelog";
 import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
+import Resources from "./pages/Resources";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/chat" component={Chat} />
+          <Route path="/resources" component={Resources} />
           <Route path="/changelog" component={Changelog} />
           <Route path="/terms" component={Terms} />
           <Route path="/disclaimer" component={Disclaimer} />
