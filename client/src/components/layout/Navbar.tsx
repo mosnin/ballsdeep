@@ -21,6 +21,10 @@ export function Navbar() {
     }
   ];
 
+  const handleNavClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="border-b border-primary/20 backdrop-blur-sm">
       <div className="container mx-auto px-4">
@@ -72,7 +76,7 @@ export function Navbar() {
 
         {/* Mobile Nav */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-4">
+          <div className="md:hidden py-4 space-y-6 border-t border-primary/20">
             {navItems.map((item, i) => (
               item.external ? (
                 <a
@@ -80,7 +84,8 @@ export function Navbar() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-muted-foreground hover:text-foreground transition-colors"
+                  className="block text-muted-foreground hover:text-foreground transition-colors px-2 py-2"
+                  onClick={handleNavClick}
                 >
                   <div className="flex items-center gap-2">
                     {item.icon}
@@ -88,14 +93,14 @@ export function Navbar() {
                   </div>
                 </a>
               ) : (
-                <Link key={i} href={item.href}>
-                  <span className="block text-muted-foreground hover:text-foreground cursor-pointer transition-colors">
+                <Link key={i} href={item.href} onClick={handleNavClick}>
+                  <span className="block text-muted-foreground hover:text-foreground cursor-pointer transition-colors px-2 py-2">
                     {item.label}
                   </span>
                 </Link>
               )
             ))}
-            <div className="mt-4">
+            <div className="pt-4 px-2">
               <WalletButton />
             </div>
           </div>
