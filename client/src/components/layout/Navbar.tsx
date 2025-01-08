@@ -31,7 +31,11 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img src="/spirit-box-7.png" alt="Wasabi AI Logo" className="h-8 w-8" />
+              <img 
+                src="/logo.png" 
+                alt="Wasabi AI Logo" 
+                className="h-8 w-8"
+              />
               <span className="text-xl font-bold">Wasabi AI</span>
             </div>
           </Link>
