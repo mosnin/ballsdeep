@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ProgressBlock } from "@/components/ui/progress-block";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -41,6 +42,27 @@ export default function Home() {
     }
   ];
 
+  const progress = [
+    {
+      title: "Blockchain Fundamentals",
+      value: 3,
+      maxValue: 5,
+      status: "completed" as const
+    },
+    {
+      title: "Smart Contract Development",
+      value: 2,
+      maxValue: 4,
+      status: "pending" as const
+    },
+    {
+      title: "DeFi Protocols",
+      value: 0,
+      maxValue: 3,
+      status: "locked" as const
+    }
+  ];
+
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Hero Section */}
@@ -77,6 +99,29 @@ export default function Home() {
             </CardContent>
           </Card>
         ))}
+      </section>
+
+      {/* Progress Section */}
+      <section className="mb-16">
+        <div className="text-center mb-8 font-mono">
+          <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5">
+            <span className="text-primary">$</span> cat progress.txt
+          </div>
+          <h2 className="text-3xl font-bold">System Progress</h2>
+        </div>
+        <Card className="border border-primary/20 bg-card/50 backdrop-blur">
+          <CardContent className="p-8 space-y-6">
+            {progress.map((item, i) => (
+              <ProgressBlock
+                key={i}
+                title={item.title}
+                value={item.value}
+                maxValue={item.maxValue}
+                status={item.status}
+              />
+            ))}
+          </CardContent>
+        </Card>
       </section>
 
       {/* Roadmap Section */}
