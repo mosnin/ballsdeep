@@ -15,7 +15,7 @@ export function Navbar() {
     { label: "Changelog", href: "/changelog" },
     { 
       label: "Twitter",
-      href: "https://x.com/shevoki_ai",
+      href: "https://x.com/wasabi_ai",
       external: true,
       icon: <FaTwitter className="h-4 w-4" />
     }
@@ -31,8 +31,8 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img src="/logo.png" alt="Shevoki Logo" className="h-8 w-8" />
-              <span className="text-xl font-bold">Shevoki</span>
+              <img src="/logo.png" alt="Wasabi AI Logo" className="h-8 w-8" />
+              <span className="text-xl font-bold">Wasabi AI</span>
             </div>
           </Link>
 

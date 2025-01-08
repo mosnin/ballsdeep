@@ -82,7 +82,7 @@ export function Terminal() {
       <div className="border-b border-primary/20 p-4">
         <div className="flex items-center gap-2">
           <TerminalIcon className="h-5 w-5 text-primary" />
-          <span className="font-mono text-sm">shevoki@solana:~$</span>
+          <span className="font-mono text-sm">wasabi@solana:~$</span>
         </div>
       </div>
 
@@ -95,7 +95,7 @@ export function Terminal() {
             }`}
           >
             <div className="flex items-center gap-2 mb-1 font-mono text-sm text-muted-foreground">
-              {msg.role === "assistant" ? "shevoki@solana:~$" : "user@solana:~$"}
+              {msg.role === "assistant" ? "wasabi@solana:~$" : "user@solana:~$"}
               {msg.timestamp && (
                 <span className="text-xs opacity-50">
                   {new Date(msg.timestamp).toLocaleTimeString()}
@@ -110,7 +110,7 @@ export function Terminal() {
         {chatMutation.isPending && (
           <div className="pl-4">
             <div className="flex items-center gap-2 font-mono text-sm text-muted-foreground">
-              shevoki@solana:~$ 
+              wasabi@solana:~$ 
               <span className="inline-flex gap-1">
                 <span className="w-1 h-1 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]"></span>
                 <span className="w-1 h-1 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]"></span>
