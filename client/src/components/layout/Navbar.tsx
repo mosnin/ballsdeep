@@ -23,9 +23,10 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/">
-            <span className="text-xl font-bold cursor-pointer">
-              Shevoki
-            </span>
+            <div className="flex items-center gap-2 cursor-pointer">
+              <img src="/logo.png" alt="Shevoki Logo" className="h-8 w-8" />
+              <span className="text-xl font-bold">Shevoki</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
