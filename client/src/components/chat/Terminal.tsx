@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Terminal as TerminalIcon } from "lucide-react";
+import { useMutation } from "@tanstack/react-query";
 
 interface Message {
   role: "user" | "assistant";
@@ -12,26 +13,44 @@ interface Message {
 export function Terminal() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+
+  const chatMutation = useMutation({
+    mutationFn: async (message: string) => {
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message }),
+      });
+
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
+
+      return response.json();
+    },
+    onSuccess: (data) => {
+      setMessages(prev => [...prev, { role: "assistant", content: data.message }]);
+    },
+    onError: (error) => {
+      console.error("Chat error:", error);
+      setMessages(prev => [...prev, {
+        role: "assistant",
+        content: "I apologize, but I encountered an error. Please try again."
+      }]);
+    }
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
+    if (!input.trim() || chatMutation.isPending) return;
 
     const userMessage = { role: "user", content: input };
     setMessages(prev => [...prev, userMessage]);
     setInput("");
-    setIsLoading(true);
 
-    // Simulate AI response - replace with actual API call
-    setTimeout(() => {
-      const aiResponse = {
-        role: "assistant",
-        content: "This is a simulated response. Replace with actual AI integration."
-      };
-      setMessages(prev => [...prev, aiResponse]);
-      setIsLoading(false);
-    }, 1000);
+    chatMutation.mutate(input);
   };
 
   return (
@@ -59,10 +78,15 @@ export function Terminal() {
             </div>
           </div>
         ))}
-        {isLoading && (
+        {chatMutation.isPending && (
           <div className="pl-4">
             <div className="flex items-center gap-2 font-mono text-sm text-muted-foreground">
-              shevoki@solana:~$ <span className="animate-pulse">▊</span>
+              shevoki@solana:~$ 
+              <span className="inline-flex gap-1">
+                <span className="w-1 h-1 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                <span className="w-1 h-1 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                <span className="w-1 h-1 bg-primary rounded-full animate-bounce"></span>
+              </span>
             </div>
           </div>
         )}
@@ -75,9 +99,9 @@ export function Terminal() {
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask about Solana..."
             className="font-mono"
-            disabled={isLoading}
+            disabled={chatMutation.isPending}
           />
-          <Button type="submit" disabled={isLoading}>
+          <Button type="submit" disabled={chatMutation.isPending}>
             Send
           </Button>
         </div>
