@@ -27,10 +27,10 @@ export function Navbar() {
             <div className="flex items-center gap-2 cursor-pointer">
               <img 
                 src="/logo.png" 
-                alt="Chilli AI Logo" 
+                alt="Ghost Pepper AI Logo" 
                 className="h-8 w-8"
               />
-              <span className="text-xl font-bold">Chilli AI</span>
+              <span className="text-xl font-bold">Ghost Pepper AI</span>
             </div>
           </Link>
 

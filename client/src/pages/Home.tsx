@@ -68,10 +68,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center mb-16 font-mono">
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 text-primary animate-pulse">
-          {'>'} initializing chilli_ai v0.1.0
+          {'>'} initializing ghost_pepper_ai v0.1.0
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 text-transparent bg-clip-text">
-          ./chilli.ai
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-600 to-orange-600 text-transparent bg-clip-text">
+          ./ghost_pepper.ai
         </h1>
         <p className="text-lg mb-8 text-muted-foreground font-mono">
           <span className="text-primary">$</span> Your AI companion for navigating the Solana ecosystem

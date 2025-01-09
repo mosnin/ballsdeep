@@ -82,7 +82,7 @@ export function Terminal() {
       <div className="border-b border-primary/20 p-4">
         <div className="flex items-center gap-2">
           <TerminalIcon className="h-5 w-5 text-primary" />
-          <span className="font-mono text-sm">chilli@solana:~$</span>
+          <span className="font-mono text-sm">ghost_pepper@solana:~$</span>
         </div>
       </div>
 
@@ -95,7 +95,7 @@ export function Terminal() {
             }`}
           >
             <div className="flex items-center gap-2 mb-1 font-mono text-sm text-muted-foreground">
-              {msg.role === "assistant" ? "chilli@solana:~$" : "user@solana:~$"}
+              {msg.role === "assistant" ? "ghost_pepper@solana:~$" : "user@solana:~$"}
               {msg.timestamp && (
                 <span className="text-xs opacity-50">
                   {new Date(msg.timestamp).toLocaleTimeString()}
