@@ -6,57 +6,57 @@ import { Link } from "wouter";
 export default function Home() {
   const features = [
     {
-      title: "Onchain Education",
-      description: "Learn about Solana blockchain mechanics, smart contracts, and DeFi concepts"
+      title: "Solana Dev Boost",
+      description: "Load up the Crack Pipe with $CRACK and get blazing fast smart contract solutions"
     },
     {
-      title: "Wallet Setup",
-      description: "Step-by-step guidance for setting up and securing your Solana wallet"
+      title: "Token Factory",
+      description: "Mainline some $CRACK to generate battle-tested token contracts instantly"
     },
     {
-      title: "Trade Analysis",
-      description: "Get insights on Solana trading patterns and market analysis"
+      title: "dApp Wizardry",
+      description: "Get high on productivity with AI-powered Solana dApp development"
     }
   ];
 
   const phases = [
     {
       phase: "Phase 1",
-      title: "App Prototype",
-      description: "Launch core chat functionality and educational features"
+      title: "Initial Hit",
+      description: "Deploy core AI development features and get users hooked"
     },
     {
       phase: "Phase 2",
-      title: "$CRACK Token", // Updated token reference
-      description: "Launch governance token and establish community fund"
+      title: "$CRACK Token",
+      description: "Launch the most addictive utility token on Solana"
     },
     {
       phase: "Phase 3",
-      title: "Token Gating",
-      description: "Implement exclusive features for token holders"
+      title: "Premium Stash",
+      description: "Roll out exclusive features for heavy $CRACK holders"
     },
     {
       phase: "Phase 4",
-      title: "Autonomous Operation",
-      description: "Transition to community-driven development and revenue model"
+      title: "Pure Uncut",
+      description: "Transition to fully autonomous AI-driven development"
     }
   ];
 
   const progress = [
     {
-      title: "Blockchain Fundamentals",
+      title: "Smart Contract Factory",
       value: 3,
       maxValue: 5,
       status: "completed" as const
     },
     {
-      title: "Smart Contract Development",
+      title: "Token Generation",
       value: 2,
       maxValue: 4,
       status: "pending" as const
     },
     {
-      title: "DeFi Protocols",
+      title: "dApp Templates",
       value: 0,
       maxValue: 3,
       status: "locked" as const
@@ -68,17 +68,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center mb-16 font-mono">
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 text-primary animate-pulse">
-          {'>'} initializing cracked_dev v0.1.0
+          {'>'} loading_crack_pipe.exe v0.1.0
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
           ./cracked.dev
         </h1>
         <p className="text-lg mb-8 text-muted-foreground font-mono">
-          <span className="text-primary">$</span> Your AI companion for navigating the Solana ecosystem
+          <span className="text-primary">$</span> Your AI-powered coding companion. Load up some $CRACK and let's build
         </p>
         <Link href="/chat">
           <Button size="lg" className="bg-primary hover:bg-primary/90 font-mono">
-            {'>'} START_LEARNING.exe
+            {'>'} LOAD_CRACK_PIPE.exe
           </Button>
         </Link>
       </section>
@@ -105,9 +105,9 @@ export default function Home() {
       <section className="mb-16">
         <div className="text-center mb-8 font-mono">
           <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5">
-            <span className="text-primary">$</span> cat progress.txt
+            <span className="text-primary">$</span> cat development_high.txt
           </div>
-          <h2 className="text-3xl font-bold">System Progress</h2>
+          <h2 className="text-3xl font-bold">Current Stash</h2>
         </div>
         <Card className="border border-primary/20 bg-card/50 backdrop-blur">
           <CardContent className="p-8 space-y-6">
@@ -130,7 +130,7 @@ export default function Home() {
           <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5">
             <span className="text-primary">$</span> cat roadmap.txt
           </div>
-          <h2 className="text-3xl font-bold">System Upgrade Path</h2>
+          <h2 className="text-3xl font-bold">The Master Plan</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {phases.map((phase, i) => (
@@ -153,16 +153,16 @@ export default function Home() {
       {/* Community Section */}
       <section className="text-center mb-16">
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 font-mono">
-          <span className="text-primary">$</span> ./join_network.sh
+          <span className="text-primary">$</span> ./join_crack_house.sh
         </div>
         <div className="max-w-3xl mx-auto">
           <Card className="border border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-colors">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold mb-4 font-mono">
-                <span className="text-primary">&gt;</span> Join the Neural Network
+                <span className="text-primary">&gt;</span> Join the Crack House
               </h2>
               <p className="text-muted-foreground mb-6 font-mono">
-                <span className="text-primary/60">$</span> Connect with fellow developers, traders, and blockchain enthusiasts. Build the future of Solana education together.
+                <span className="text-primary/60">$</span> Get addicted to building the future of Solana. Load up your pipe with $CRACK tokens and start coding like a beast.
               </p>
               <div className="flex justify-center gap-4">
                 <a
@@ -175,7 +175,7 @@ export default function Home() {
                 </a>
                 <Link href="/chat">
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono cursor-pointer">
-                    <span className="text-primary">&gt;</span> Start Building
+                    <span className="text-primary">&gt;</span> Start Coding
                   </span>
                 </Link>
               </div>
