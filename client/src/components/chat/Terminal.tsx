@@ -82,7 +82,7 @@ export function Terminal() {
       <div className="border-b border-primary/20 p-4">
         <div className="flex items-center gap-2">
           <TerminalIcon className="h-5 w-5 text-primary" />
-          <span className="font-mono text-sm">cracked@solana:~$</span>
+          <span className="font-mono text-sm">crack_pipe@solana:~$ Ready to code. Load up some $CRACK to continue</span>
         </div>
       </div>
 
@@ -95,7 +95,7 @@ export function Terminal() {
             }`}
           >
             <div className="flex items-center gap-2 mb-1 font-mono text-sm text-muted-foreground">
-              {msg.role === "assistant" ? "cracked@solana:~$" : "user@solana:~$"}
+              {msg.role === "assistant" ? "crack_pipe@solana:~$" : "user@solana:~$"}
               {msg.timestamp && (
                 <span className="text-xs opacity-50">
                   {new Date(msg.timestamp).toLocaleTimeString()}
@@ -110,7 +110,7 @@ export function Terminal() {
         {chatMutation.isPending && (
           <div className="pl-4">
             <div className="flex items-center gap-2 font-mono text-sm text-muted-foreground">
-              wasabi@solana:~$ 
+              crack_pipe@solana:~$ Loading up $CRACK...
               <span className="inline-flex gap-1">
                 <span className="w-1 h-1 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]"></span>
                 <span className="w-1 h-1 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]"></span>
@@ -126,7 +126,7 @@ export function Terminal() {
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about Solana..."
+            placeholder="Load up the Crack Pipe with your dev questions..."
             className="font-mono"
             disabled={chatMutation.isPending}
           />
@@ -135,7 +135,7 @@ export function Terminal() {
             disabled={chatMutation.isPending}
             className="font-mono"
           >
-            {chatMutation.isPending ? "Processing..." : "Send"}
+            {chatMutation.isPending ? "Loading $CRACK..." : "Send"}
           </Button>
         </div>
       </form>
