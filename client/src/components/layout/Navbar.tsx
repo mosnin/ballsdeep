@@ -31,7 +31,7 @@ export function Navbar() {
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
               <img 
-                src="Untitled design - 2025-01-15T014611.536.png" 
+                src="/Untitled design - 2025-01-15T014611.536.png" 
                 alt="Cracked Dev Logo" 
                 className="h-8 w-8"
               />
