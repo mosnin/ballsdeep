@@ -8,6 +8,7 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   const navItems = [
     { label: "Chat", href: "/chat" },
@@ -24,17 +25,25 @@ export function Navbar() {
     setIsOpen(false);
   };
 
+  const handleImageError = () => {
+    console.error("Failed to load logo image");
+    setImgError(true);
+  };
+
   return (
     <nav className="border-b border-primary/20 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img 
-                src="../../../spirit-box-7.png"
-                alt="Cracked Dev Logo" 
-                className="h-8 w-8"
-              />
+              {!imgError && (
+                <img 
+                  src="/spirit-box-7.png"
+                  alt="Cracked Dev Logo" 
+                  className="h-8 w-8"
+                  onError={handleImageError}
+                />
+              )}
               <span className="text-xl font-bold">Cracked Dev</span>
             </div>
           </Link>
