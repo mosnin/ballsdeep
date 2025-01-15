@@ -27,7 +27,7 @@ export default function Home() {
     },
     {
       phase: "Phase 2",
-      title: "$WASABI Token",
+      title: "$CRACK Token", // Updated token reference
       description: "Launch governance token and establish community fund"
     },
     {
@@ -68,10 +68,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center mb-16 font-mono">
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 text-primary animate-pulse">
-          {'>'} initializing ghost_pepper_ai v0.1.0
+          {'>'} initializing cracked_dev v0.1.0
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-600 to-orange-600 text-transparent bg-clip-text">
-          ./ghost_pepper.ai
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
+          ./cracked.dev
         </h1>
         <p className="text-lg mb-8 text-muted-foreground font-mono">
           <span className="text-primary">$</span> Your AI companion for navigating the Solana ecosystem
@@ -165,9 +165,9 @@ export default function Home() {
                 <span className="text-primary/60">$</span> Connect with fellow developers, traders, and blockchain enthusiasts. Build the future of Solana education together.
               </p>
               <div className="flex justify-center gap-4">
-                <a 
-                  href="https://x.com/wasabi_ai" 
-                  target="_blank" 
+                <a
+                  href="https://x.com/wasabi_ai"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono"
                 >
