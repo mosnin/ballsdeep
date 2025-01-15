@@ -70,7 +70,7 @@ export default function Home() {
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 text-primary animate-pulse">
           {'>'} loading_crack_pipe.exe v0.1.0
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-transparent bg-clip-text">
           ./cracked.dev
         </h1>
         <p className="text-lg mb-8 text-muted-foreground font-mono">
