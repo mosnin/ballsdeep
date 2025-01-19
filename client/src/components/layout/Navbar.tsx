@@ -11,23 +11,18 @@ export function Navbar() {
   const [imgError, setImgError] = useState(false);
 
   const navItems = [
-    { label: "Chat", href: "/chat" },
+    { label: "Terminal", href: "/chat" },
     { 
-      label: "Twitter", 
-      href: "https://x.com/cracked_dev_ai",
+      label: "Updates", 
+      href: "https://x.com/maga_terminal",
       external: true,
       icon: <FaTwitter className="h-4 w-4" />
     },
-    { label: "Changelog", href: "/changelog" }
+    { label: "Mission", href: "/mission" }
   ];
 
   const handleNavClick = () => {
     setIsOpen(false);
-  };
-
-  const handleImageError = () => {
-    console.error("Failed to load logo image");
-    setImgError(true);
   };
 
   return (
@@ -36,15 +31,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              {!imgError && (
-                <img 
-                  src="/spirit-box-7.png"
-                  alt="Cracked Dev Logo" 
-                  className="h-8 w-8"
-                  onError={handleImageError}
-                />
-              )}
-              <span className="text-xl font-bold">Cracked Dev</span>
+              <span className="text-xl font-bold text-primary">MAGA Terminal</span>
             </div>
           </Link>
 
