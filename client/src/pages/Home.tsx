@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ProgressBlock } from "@/components/ui/progress-block";
 import { Link } from "wouter";
+import { FaTwitter, FaTelegram } from "react-icons/fa";
 
 export default function Home() {
   const features = [
@@ -166,12 +167,22 @@ export default function Home() {
               </p>
               <div className="flex justify-center gap-4">
                 <a
-                  href="https://x.com/maga_terminal"
+                  href="https://x.com/magaterminal_ai"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono"
                 >
+                  <FaTwitter className="h-4 w-4" />
                   <span className="text-primary">$</span> Follow Updates
+                </a>
+                <a
+                  href="https://t.me/magaterminal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono"
+                >
+                  <FaTelegram className="h-4 w-4" />
+                  <span className="text-primary">$</span> Join Community
                 </a>
                 <Link href="/chat">
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono cursor-pointer">

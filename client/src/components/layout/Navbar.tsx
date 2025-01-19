@@ -2,21 +2,26 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { FaTwitter } from "react-icons/fa";
+import { FaTwitter, FaTelegram } from "react-icons/fa";
 import { WalletButton } from "@/components/ui/WalletButton";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [imgError, setImgError] = useState(false);
 
   const navItems = [
     { label: "Terminal", href: "/chat" },
     { 
       label: "Updates", 
-      href: "https://x.com/maga_terminal",
+      href: "https://x.com/magaterminal_ai",
       external: true,
       icon: <FaTwitter className="h-4 w-4" />
+    },
+    {
+      label: "Community",
+      href: "https://t.me/magaterminal",
+      external: true,
+      icon: <FaTelegram className="h-4 w-4" />
     },
     { label: "Mission", href: "/mission" }
   ];
