@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FaTwitter, FaTelegram } from "react-icons/fa";
 import { WalletButton } from "@/components/ui/WalletButton";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import ballsDeepLogo from "../../../public/balls-deep-logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,17 +27,18 @@ export function Navbar() {
     { label: "Strategy", href: "/mission" }
   ];
 
-  const handleNavClick = () => {
-    setIsOpen(false);
-  };
-
   return (
     <nav className="border-b border-primary/20 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img src="/balls-deep-logo.png" alt="BallsDeep Logo" className="h-8 w-8" />
+              <div 
+                className="w-8 h-8 bg-contain bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${ballsDeepLogo})` }}
+                role="img"
+                aria-label="BallsDeep Logo"
+              />
               <span className="text-xl font-bold text-primary">BallsDeep</span>
             </div>
           </Link>
@@ -73,6 +75,7 @@ export function Navbar() {
             <button
               className="p-2"
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
             >
               {isOpen ? <X /> : <Menu />}
             </button>
@@ -90,7 +93,7 @@ export function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-muted-foreground hover:text-foreground transition-colors px-2 py-2"
-                  onClick={handleNavClick}
+                  onClick={() => setIsOpen(false)}
                 >
                   <div className="flex items-center gap-2">
                     {item.icon}
@@ -98,7 +101,7 @@ export function Navbar() {
                   </div>
                 </a>
               ) : (
-                <Link key={i} href={item.href} onClick={handleNavClick}>
+                <Link key={i} href={item.href} onClick={() => setIsOpen(false)}>
                   <span className="block text-muted-foreground hover:text-foreground cursor-pointer transition-colors px-2 py-2">
                     {item.label}
                   </span>
