@@ -36,6 +36,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
+              <img src="/balls-deep-logo.png" alt="BallsDeep Logo" className="h-8 w-8" />
               <span className="text-xl font-bold text-primary">BallsDeep</span>
             </div>
           </Link>
