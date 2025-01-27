@@ -167,7 +167,7 @@ export default function Home() {
               </p>
               <div className="flex justify-center gap-4">
                 <a
-                  href="https://x.com/magaterminal_ai"
+                  href="https://x.com/soballsdeep"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono"
@@ -176,7 +176,7 @@ export default function Home() {
                   <span className="text-primary">$</span> Deep Updates
                 </a>
                 <a
-                  href="https://t.me/magaterminal"
+                  href="https://t.me/+omtwFOy9BfViYWQx"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono"

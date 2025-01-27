@@ -13,17 +13,16 @@ export function Navbar() {
     { label: "Terminal", href: "/chat" },
     { 
       label: "Updates", 
-      href: "https://x.com/magaterminal_ai",
+      href: "https://x.com/soballsdeep",
       external: true,
       icon: <FaTwitter className="h-4 w-4" />
     },
     {
       label: "Community",
-      href: "https://t.me/magaterminal",
+      href: "https://t.me/+omtwFOy9BfViYWQx",
       external: true,
       icon: <FaTelegram className="h-4 w-4" />
-    },
-    { label: "Strategy", href: "/mission" }
+    }
   ];
 
   return (
