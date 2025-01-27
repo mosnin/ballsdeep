@@ -7,57 +7,57 @@ import { FaTwitter, FaTelegram } from "react-icons/fa";
 export default function Home() {
   const features = [
     {
-      title: "DeepSeek Integration",
-      description: "Next-gen AI assistance for Solana development"
+      title: "Deep Solana Integration",
+      description: "Dive into the deepest parts of Solana development"
     },
     {
-      title: "DeFi Power",
-      description: "Build DeFi applications with unmatched depth and sophistication"
+      title: "Balls Deep Analytics",
+      description: "Get deep insights into your Solana applications"
     },
     {
-      title: "Full Stack Solana",
-      description: "Your gateway to building advanced Solana applications"
+      title: "Maximum Depth Tools",
+      description: "Tools that go deeper than any other platform"
     }
   ];
 
   const phases = [
     {
       phase: "Phase 1",
-      title: "Initial Penetration",
-      description: "Launch core DeepSeek AI development features"
+      title: "Initial Thrust",
+      description: "First deep dive into Solana's core features"
     },
     {
       phase: "Phase 2",
-      title: "Deep Expansion",
-      description: "Scale platform capabilities and user base"
+      title: "Going Deeper",
+      description: "Expand deep into advanced Solana capabilities"
     },
     {
       phase: "Phase 3",
-      title: "Maximum Depth",
-      description: "Roll out premium features for power users"
+      title: "Maximum Penetration",
+      description: "Achieve unprecedented depths in Solana development"
     },
     {
       phase: "Phase 4",
-      title: "Full Saturation",
-      description: "Achieve complete AI-driven development dominance"
+      title: "Deep State",
+      description: "Maintain dominance at the deepest levels of Solana"
     }
   ];
 
   const progress = [
     {
-      title: "DeepSeek Integration",
-      value: 3,
+      title: "Depth Achieved",
+      value: 4,
       maxValue: 5,
       status: "completed" as const
     },
     {
-      title: "Smart Contract Factory",
+      title: "Penetration Progress",
       value: 2,
       maxValue: 4,
       status: "pending" as const
     },
     {
-      title: "DeFi Templates",
+      title: "Balls Deep Features",
       value: 0,
       maxValue: 3,
       status: "locked" as const
@@ -69,17 +69,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center mb-16 font-mono">
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 text-primary animate-pulse">
-          {'>'} init_ballsdeep.sol
+          {'>'} going_deep_in_solana.sol
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-transparent bg-clip-text">
           BallsDeep
         </h1>
         <p className="text-lg mb-8 text-muted-foreground font-mono">
-          <span className="text-primary">$</span> Going balls deep in Solana development with DeepSeek AI
+          <span className="text-primary">$</span> Going deeper than ever in Solana development
         </p>
         <Link href="/chat">
           <Button size="lg" className="bg-primary hover:bg-primary/90 font-mono">
-            {'>'} START_DEEPSEEK.sol
+            {'>'} START_DIVING.sol
           </Button>
         </Link>
       </section>
@@ -106,9 +106,9 @@ export default function Home() {
       <section className="mb-16">
         <div className="text-center mb-8 font-mono">
           <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5">
-            <span className="text-primary">$</span> cat depth_metrics.sol
+            <span className="text-primary">$</span> cat depth_report.sol
           </div>
-          <h2 className="text-3xl font-bold">Penetration Status</h2>
+          <h2 className="text-3xl font-bold">How Deep Are We?</h2>
         </div>
         <Card className="border border-primary/20 bg-card/50 backdrop-blur">
           <CardContent className="p-8 space-y-6">
@@ -129,9 +129,9 @@ export default function Home() {
       <section className="mb-16">
         <div className="text-center mb-8 font-mono">
           <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5">
-            <span className="text-primary">$</span> cat penetration_strategy.sol
+            <span className="text-primary">$</span> cat depth_plan.sol
           </div>
-          <h2 className="text-3xl font-bold">The Deep Strategy</h2>
+          <h2 className="text-3xl font-bold">The Deep Protocol</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {phases.map((phase, i) => (
@@ -154,16 +154,16 @@ export default function Home() {
       {/* Community Section */}
       <section className="text-center mb-16">
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 font-mono">
-          <span className="text-primary">$</span> ./join_movement.sol
+          <span className="text-primary">$</span> ./go_deeper.sol
         </div>
         <div className="max-w-3xl mx-auto">
           <Card className="border border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-colors">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold mb-4 font-mono">
-                <span className="text-primary">&gt;</span> Go Deep With Us
+                <span className="text-primary">&gt;</span> Ready to Go Deep?
               </h2>
               <p className="text-muted-foreground mb-6 font-mono">
-                <span className="text-primary/60">$</span> Join the revolution in AI-powered Solana development. Let's go balls deep together.
+                <span className="text-primary/60">$</span> Join us in exploring the deepest corners of Solana development. Let's dive deeper than ever before.
               </p>
               <div className="flex justify-center gap-4">
                 <a
@@ -173,7 +173,7 @@ export default function Home() {
                   className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono"
                 >
                   <FaTwitter className="h-4 w-4" />
-                  <span className="text-primary">$</span> Follow Updates
+                  <span className="text-primary">$</span> Deep Updates
                 </a>
                 <a
                   href="https://t.me/magaterminal"
@@ -182,11 +182,11 @@ export default function Home() {
                   className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono"
                 >
                   <FaTelegram className="h-4 w-4" />
-                  <span className="text-primary">$</span> Join Community
+                  <span className="text-primary">$</span> Deep Community
                 </a>
                 <Link href="/chat">
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono cursor-pointer">
-                    <span className="text-primary">&gt;</span> Start Building
+                    <span className="text-primary">&gt;</span> Go Deeper
                   </span>
                 </Link>
               </div>
