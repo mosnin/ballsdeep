@@ -5,7 +5,6 @@ import { useState } from "react";
 import { FaTwitter, FaTelegram } from "react-icons/fa";
 import { WalletButton } from "@/components/ui/WalletButton";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import ballsDeepLogo from "../../../public/balls-deep-logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,11 +32,10 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <div 
-                className="w-8 h-8 bg-contain bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${ballsDeepLogo})` }}
-                role="img"
-                aria-label="BallsDeep Logo"
+              <img 
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8fERpQ_S7oUOM-jC7XRaDZXfVAV4lKyXX-dt8OifeII6QWW6VnGNWJL0DK9422UBv6KAwGOLdIxardLFDXyTyL_UonRV48a_d4empFoWggfDaddZ4HoIytiqBxwW6yLwPQ3AEhWhcObNEJMcB5RFks4Wl-gnDc8qK2nZYjUGrwvWebxoNb_ESqrLnZjY/s320/Untitled%20design%20-%202025-01-26T215738.301.png"
+                alt="BallsDeep Logo"
+                className="h-8 w-8"
               />
               <span className="text-xl font-bold text-primary">BallsDeep</span>
             </div>
