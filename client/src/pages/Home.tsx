@@ -7,57 +7,57 @@ import { FaTwitter, FaTelegram } from "react-icons/fa";
 export default function Home() {
   const features = [
     {
-      title: "America First Development",
-      description: "Build great applications with patriotic AI assistance"
+      title: "DeepSeek Integration",
+      description: "Next-gen AI assistance for Solana development"
     },
     {
-      title: "Freedom Factory",
-      description: "Generate code that upholds American values and excellence"
+      title: "DeFi Power",
+      description: "Build DeFi applications with unmatched depth and sophistication"
     },
     {
-      title: "Patriot Platform",
-      description: "Your AI companion for making America code great again"
+      title: "Full Stack Solana",
+      description: "Your gateway to building advanced Solana applications"
     }
   ];
 
   const phases = [
     {
       phase: "Phase 1",
-      title: "Initial Deployment",
-      description: "Launch core patriotic AI development features"
+      title: "Initial Penetration",
+      description: "Launch core DeepSeek AI development features"
     },
     {
       phase: "Phase 2",
-      title: "Platform Growth",
-      description: "Expand capabilities for American developers"
+      title: "Deep Expansion",
+      description: "Scale platform capabilities and user base"
     },
     {
       phase: "Phase 3",
-      title: "Premium Features",
-      description: "Roll out exclusive features for dedicated patriots"
+      title: "Maximum Depth",
+      description: "Roll out premium features for power users"
     },
     {
       phase: "Phase 4",
-      title: "Full Liberation",
-      description: "Achieve complete AI-driven development freedom"
+      title: "Full Saturation",
+      description: "Achieve complete AI-driven development dominance"
     }
   ];
 
   const progress = [
     {
-      title: "Code Factory",
+      title: "DeepSeek Integration",
       value: 3,
       maxValue: 5,
       status: "completed" as const
     },
     {
-      title: "Project Generation",
+      title: "Smart Contract Factory",
       value: 2,
       maxValue: 4,
       status: "pending" as const
     },
     {
-      title: "AI Templates",
+      title: "DeFi Templates",
       value: 0,
       maxValue: 3,
       status: "locked" as const
@@ -69,17 +69,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center mb-16 font-mono">
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 text-primary animate-pulse">
-          {'>'} loading_maga_terminal.exe v1.0.0
+          {'>'} init_ballsdeep.sol
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-600 via-white to-blue-600 text-transparent bg-clip-text">
-          MAGA Terminal
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-transparent bg-clip-text">
+          BallsDeep
         </h1>
         <p className="text-lg mb-8 text-muted-foreground font-mono">
-          <span className="text-primary">$</span> Your patriotic AI coding companion. Let's make American code great again!
+          <span className="text-primary">$</span> Going balls deep in Solana development with DeepSeek AI
         </p>
         <Link href="/chat">
           <Button size="lg" className="bg-primary hover:bg-primary/90 font-mono">
-            {'>'} START_MAGA_TERMINAL.exe
+            {'>'} START_DEEPSEEK.sol
           </Button>
         </Link>
       </section>
@@ -106,9 +106,9 @@ export default function Home() {
       <section className="mb-16">
         <div className="text-center mb-8 font-mono">
           <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5">
-            <span className="text-primary">$</span> cat platform_status.txt
+            <span className="text-primary">$</span> cat depth_metrics.sol
           </div>
-          <h2 className="text-3xl font-bold">Current Status</h2>
+          <h2 className="text-3xl font-bold">Penetration Status</h2>
         </div>
         <Card className="border border-primary/20 bg-card/50 backdrop-blur">
           <CardContent className="p-8 space-y-6">
@@ -129,9 +129,9 @@ export default function Home() {
       <section className="mb-16">
         <div className="text-center mb-8 font-mono">
           <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5">
-            <span className="text-primary">$</span> cat mission.txt
+            <span className="text-primary">$</span> cat penetration_strategy.sol
           </div>
-          <h2 className="text-3xl font-bold">The Great Mission</h2>
+          <h2 className="text-3xl font-bold">The Deep Strategy</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {phases.map((phase, i) => (
@@ -154,16 +154,16 @@ export default function Home() {
       {/* Community Section */}
       <section className="text-center mb-16">
         <div className="inline-block px-4 py-1 mb-4 text-sm border border-primary/20 rounded bg-primary/5 font-mono">
-          <span className="text-primary">$</span> ./join_patriots.sh
+          <span className="text-primary">$</span> ./join_movement.sol
         </div>
         <div className="max-w-3xl mx-auto">
           <Card className="border border-primary/20 bg-card/50 backdrop-blur hover:border-primary/40 transition-colors">
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold mb-4 font-mono">
-                <span className="text-primary">&gt;</span> Join the Movement
+                <span className="text-primary">&gt;</span> Go Deep With Us
               </h2>
               <p className="text-muted-foreground mb-6 font-mono">
-                <span className="text-primary/60">$</span> Build the future of American software development. Start coding with AI that puts America first.
+                <span className="text-primary/60">$</span> Join the revolution in AI-powered Solana development. Let's go balls deep together.
               </p>
               <div className="flex justify-center gap-4">
                 <a
@@ -186,7 +186,7 @@ export default function Home() {
                 </a>
                 <Link href="/chat">
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors font-mono cursor-pointer">
-                    <span className="text-primary">&gt;</span> Start Coding
+                    <span className="text-primary">&gt;</span> Start Building
                   </span>
                 </Link>
               </div>

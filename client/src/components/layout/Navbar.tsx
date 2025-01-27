@@ -23,7 +23,7 @@ export function Navbar() {
       external: true,
       icon: <FaTelegram className="h-4 w-4" />
     },
-    { label: "Mission", href: "/mission" }
+    { label: "Strategy", href: "/mission" }
   ];
 
   const handleNavClick = () => {
@@ -36,7 +36,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <span className="text-xl font-bold text-primary">MAGA Terminal</span>
+              <span className="text-xl font-bold text-primary">BallsDeep</span>
             </div>
           </Link>
 

@@ -55,7 +55,7 @@ export function Terminal() {
       });
       const errorMessage: Message = {
         role: "assistant",
-        content: "I apologize, patriot, but I encountered an error. Please try again.",
+        content: "I apologize, but I encountered an error. Please try again.",
         timestamp: new Date().toISOString()
       };
       setMessages(prev => [...prev, errorMessage]);
@@ -82,7 +82,7 @@ export function Terminal() {
       <div className="border-b border-primary/20 p-4">
         <div className="flex items-center gap-2">
           <TerminalIcon className="h-5 w-5 text-primary" />
-          <span className="font-mono text-sm">maga_terminal@patriots:~$ Making American Code Great Again!</span>
+          <span className="font-mono text-sm">ballsdeep@solana:~$ Going balls deep in Solana!</span>
         </div>
       </div>
 
@@ -95,7 +95,7 @@ export function Terminal() {
             }`}
           >
             <div className="flex items-center gap-2 mb-1 font-mono text-sm text-muted-foreground">
-              {msg.role === "assistant" ? "maga_terminal@patriots:~$" : "patriot@localhost:~$"}
+              {msg.role === "assistant" ? "deepseek@solana:~$" : "user@localhost:~$"}
               {msg.timestamp && (
                 <span className="text-xs opacity-50">
                   {new Date(msg.timestamp).toLocaleTimeString()}
@@ -110,11 +110,11 @@ export function Terminal() {
         {chatMutation.isPending && (
           <div className="pl-4">
             <div className="flex items-center gap-2 font-mono text-sm text-muted-foreground">
-              maga_terminal@patriots:~$ Computing patriotic response...
+              deepseek@solana:~$ Computing deep response...
               <span className="inline-flex gap-1">
-                <span className="w-1 h-1 bg-red-600 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-                <span className="w-1 h-1 bg-white rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-                <span className="w-1 h-1 bg-blue-600 rounded-full animate-bounce"></span>
+                <span className="w-1 h-1 bg-purple-600 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                <span className="w-1 h-1 bg-pink-500 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                <span className="w-1 h-1 bg-red-500 rounded-full animate-bounce"></span>
               </span>
             </div>
           </div>
@@ -126,14 +126,14 @@ export function Terminal() {
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask the MAGA Terminal anything about development..."
+            placeholder="Ask DeepSeek anything about Solana development..."
             className="font-mono"
             disabled={chatMutation.isPending}
           />
           <Button 
             type="submit" 
             disabled={chatMutation.isPending}
-            className="font-mono bg-red-600 hover:bg-red-700"
+            className="font-mono bg-purple-600 hover:bg-purple-700"
           >
             {chatMutation.isPending ? "Computing..." : "Send"}
           </Button>
